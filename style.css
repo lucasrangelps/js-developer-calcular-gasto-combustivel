@@ -3,17 +3,19 @@ html{
     height: 100%;
 }
 
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
+*{
     margin: 0;
     padding: 0;
 }
 
+.quadro {
+    display: flex;
+}
+
+
 body{
     align-items: center;
-    background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+    background: linear-gradient(320deg, #63c9b4, #ffef78, #63c9b4);
     display: flex;
     font-family: 'dosis', sans-serif;
     font-display: swap;
@@ -22,7 +24,74 @@ body{
 
 }
 
-.wrapper{
+#resultado {
+        
+        backdrop-filter: blur(5.5px);
+        -webkit-backdrop-filter: blur(5.5px);
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+        color:  #232323;
+        font-size: 20px;
+        overflow: auto;
+        padding:  10px;
+        text-align: center;
+        width: 70%;
+        margin: 10px;
+        align-items: center;
+        justify-content: center;
+        
+        
+    
+}
+
+.quadro .botao {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px ;
+}
+
+#send {
+
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius:  14px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    
+    font-family: inherit;
+    font-size: 20px;
+    height: 30px;
+    width: 150px;
+    
+    
+}
+
+#send:hover {
+    background-color: #8fcfc3;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+#send:active {
+    background-color: #63c9b4;
+}
+
+#gasolina {
+    margin: 0.625rem;
+    width: 10%;
+
+}
+
+#etanol {
+    margin: 0.625rem;
+    width: 10%;
+}
+
+form {
+    display: flex;
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
    
@@ -36,82 +105,42 @@ body{
     flex-basis: 400px;
     height: 540px;
     padding: 20px 35px;
-
-
+    flex-direction: column;
 }
 
-.screen{
+p {
+    text-align: center;
+}
+
+#kminicial  {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     background: rgba(255, 255, 255, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
+    border-radius: 14px;
     box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
     color:  #232323;
-    font-size: 35px;
+    font-size: 20px;
     overflow: auto;
-    padding:  20px;
-    text-align: right;
-    width: 326px;
-
-
-
+    padding:  10px;
+    text-align: center;
+    width: 86%;
+    margin: 10px;
 }
 
-.calc-button-row{
-    display: flex;
-    justify-content: space-between;
-    margin: 5% 0;
-}
-
-.calc-button{
+#kmfinal {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     background: rgba(255, 255, 255, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius:  16px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-    color: #232323;
-    flex-basis: 20%;
-    font-family: inherit;
-    font-size: 24px;
-    height: 65px;
+    border-radius: 14px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    color:  #232323;
+    font-size: 20px;
+    overflow: auto;
+    padding:  10px;
+    text-align: center;
+    width: 86%;
+    margin: 10px;
 }
 
-.calc-button:last-child{
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius:  16px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-    color: #fff;
-    background: #d72880;
-
-}
-
-.calc-button:last-child:hover{
-    background-color: inherit;
-    color: inherit;
-
-}
-
-.calc-button:hover{
-    background-color: initial;
-
-    
-}
-
-.calc-button:active{
-    background-color: #ffef78;
-
-}
-
-.double{
-    flex-basis: 47%;
-
-}
-
-.triple{
-    flex-basis: 73%;
-}

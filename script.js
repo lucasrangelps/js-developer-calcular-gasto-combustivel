@@ -1,91 +1,45 @@
-let runningTotal = 0;
-let buffer = "0";
-let previousOperator;
 
-const screen = document.querySelector('.screen');
+let tipoCombustivel = "etanol";
+let valorGasolina = 5.69;
+let valorEtanol = 3.59;
+let kmPorLitroGasolina = 12.3;
+let kmPorLitroEtanol = 8.8;
 
-function buttonClick(value){
-    if (isNaN(value)){
-        handleSymbol(value);
-    }else{
-        handeNumber(value);
-    }
-    screen.innerText = buffer;
 
-}
+const btn = document.querySelector("#send");
 
-function handleSymbol(symbol){
-    switch(symbol){
-        case 'C':
-            buffer = '0'
-            runningTotal = 0;
-            break;
-        case '=':
-            if(previousOperator === null){
-                return
-            }
-            flushOperation(parseInt(buffer));
-            previousOperator = null;
-            buffer = runningTotal;
-            runningTotal = 0;
-            break;
-        case '←':
-            if(buffer.length === 1){
-                buffer = '0';
-            }else{
-                buffer = buffer.substring(0, buffer.length - 1);
-            }
-            break;
-        case '+':
-        case '−':
-        case '×':
-        case '÷':
-            handleMath(symbol);
-            break;
-     }
-}
-       
-function handleMath(symbol){
-    if(buffer === '0'){
-        return;
+document.getElementById("send").onclick = function() {
+      var radios = document.getElementsByName("combustivel");
+      for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          console.log("Tipo de combustivel " + radios[i].value);
+          const combustivel = radios[i].value;
+          
+          const kmInicial = document.querySelector("#kminicial");
+          const valueKmInicial = kmInicial.value;
+
+          const kmFinal = document.querySelector("#kmfinal");
+          const valueKmFinal = kmFinal.value;
+
+          const kmPercorrido = valueKmFinal - valueKmInicial;
+
+          
+
+          if (combustivel === "gasolina") {
+            let litrosGasto = kmPercorrido / kmPorLitroGasolina;
+            let valorGasto = litrosGasto * valorGasolina;
+            console.log(valorGasto.toFixed(2));
+            document.getElementById('resultado').value = valorGasto.toFixed(2);
+
+          } else if ( combustivel === "etanol" ) {
+            let litrosGasto = kmPercorrido / kmPorLitroEtanol;
+            let valorGasto = litrosGasto * valorEtanol;
+            console.log(valorGasto.toFixed(2));
+            document.getElementById('resultado').value = valorGasto.toFixed(2);
+          } 
+        }
+        
+      }
     }
 
-    const intBuffer = parseInt(buffer);
 
-    if(runningTotal === 0 ){
-        runningTotal = intBuffer;
-    }else{
-        flushOperation(intBuffer);
-    }
-    previousOperator = symbol;
-    buffer = '0';
-}
-
-function flushOperation(intBuffer){
-    if(previousOperator === '+'){
-        runningTotal += intBuffer;
-    }else if(previousOperator === '−'){
-        runningTotal -= intBuffer;
-    }else if(previousOperator === '×'){
-        runningTotal *= intBuffer;
-    }else if(previousOperator === '÷'){
-        runningTotal /= intBuffer;
-    }
-}
-
-function handeNumber(numberString){
-    if(buffer === "0"){
-        buffer = numberString;
-    }else{
-        buffer += numberString;
-    }
-}
-    
-
-function init(){
-    document.querySelector('.calc-buttons').addEventListener('click', function(event){
-        buttonClick(event.target.innerText);
-    })
-}
-
-init();
