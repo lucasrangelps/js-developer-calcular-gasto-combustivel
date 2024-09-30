@@ -2,17 +2,13 @@ html{
     box-sizing: border-box;
     height: 100%;
 }
-
 *{
     margin: 0;
     padding: 0;
 }
-
 .quadro {
     display: flex;
 }
-
-
 body{
     align-items: center;
     background: linear-gradient(320deg, #63c9b4, #ffef78, #63c9b4);
@@ -21,11 +17,8 @@ body{
     font-display: swap;
     height: inherit;
     justify-content: center;
-
 }
-
 #resultado {
-        
         backdrop-filter: blur(5.5px);
         -webkit-backdrop-filter: blur(5.5px);
         background: rgba(255, 255, 255, 0.75);
@@ -40,18 +33,13 @@ body{
         width: 70%;
         margin: 10px;
         align-items: center;
-        justify-content: center;
-        
-        
-    
+        justify-content: center;  
 }
-
 .quadro .botao {
     display: flex;
     justify-content: center;
     padding-top: 20px ;
 }
-
 #send {
 
     backdrop-filter: blur(5.5px);
@@ -69,27 +57,22 @@ body{
     
     
 }
-
 #send:hover {
     background-color: #8fcfc3;
     border: 2px solid rgba(0, 0, 0, 0.1);
 }
-
 #send:active {
     background-color: #63c9b4;
 }
-
 #gasolina {
     margin: 0.625rem;
     width: 10%;
 
 }
-
 #etanol {
     margin: 0.625rem;
     width: 10%;
 }
-
 form {
     display: flex;
     backdrop-filter: blur(5.5px);
@@ -107,11 +90,9 @@ form {
     padding: 20px 35px;
     flex-direction: column;
 }
-
 p {
     text-align: center;
 }
-
 #kminicial  {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
@@ -127,7 +108,6 @@ p {
     width: 86%;
     margin: 10px;
 }
-
 #kmfinal {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
@@ -143,4 +123,6 @@ p {
     width: 86%;
     margin: 10px;
 }
-
+#historico1{
+    background-color: #8fcfc3;
+}

@@ -23,6 +23,12 @@ document.getElementById("send").onclick = function() {
 
           const kmPercorrido = valueKmFinal - valueKmInicial;
 
+          var reg = JSON.parse(localStorage.getItem("reg"));
+
+          if (reg == null){
+            localStorage.setItem("reg", "[]");
+            reg = [];
+          }
           
 
           if (combustivel === "gasolina") {
@@ -30,12 +36,19 @@ document.getElementById("send").onclick = function() {
             let valorGasto = litrosGasto * valorGasolina;
             console.log(valorGasto.toFixed(2));
             document.getElementById('resultado').value = valorGasto.toFixed(2);
+             
+            
+            hist1 = valorGasto.toFixed(2);
+
+            document.getElementById('historico1').innerHTML = ("R$: " + hist1);
 
           } else if ( combustivel === "etanol" ) {
             let litrosGasto = kmPercorrido / kmPorLitroEtanol;
             let valorGasto = litrosGasto * valorEtanol;
             console.log(valorGasto.toFixed(2));
             document.getElementById('resultado').value = valorGasto.toFixed(2);
+            hist1 = valorGasto.toFixed(2);
+            document.getElementById('historico1').innerHTML = ("R$: " + hist1);
           } 
         }
         
