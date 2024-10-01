@@ -1,9 +1,9 @@
 
 let tipoCombustivel = "etanol";
 let valorGasolina = 5.69;
-let valorEtanol = 3.59;
+let valorEtanol = 4.19;
 let kmPorLitroGasolina = 12.3;
-let kmPorLitroEtanol = 8.8;
+let kmPorLitroEtanol = 6.8;
 
 
 const btn = document.querySelector("#send");
