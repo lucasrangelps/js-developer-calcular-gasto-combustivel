@@ -41,6 +41,8 @@ document.getElementById("send").onclick = function() {
             hist1 = valorGasto.toFixed(2);
 
             document.getElementById('historico1').innerHTML = ("R$: " + hist1);
+            document.getElementById('kmrodado').innerHTML = ("Km percorrido: " + kmPercorrido);
+            document.getElementById('litros').innerHTML = ("Litros: " + litrosGasto.toFixed(2));
 
           } else if ( combustivel === "etanol" ) {
             let litrosGasto = kmPercorrido / kmPorLitroEtanol;
