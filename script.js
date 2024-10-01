@@ -51,6 +51,8 @@ document.getElementById("send").onclick = function() {
             document.getElementById('resultado').value = valorGasto.toFixed(2);
             hist1 = valorGasto.toFixed(2);
             document.getElementById('historico1').innerHTML = ("R$: " + hist1);
+            document.getElementById('kmrodado').innerHTML = ("Km percorrido: " + kmPercorrido);
+            document.getElementById('litros').innerHTML = ("Litros: " + litrosGasto.toFixed(2));
           } 
         }
         

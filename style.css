@@ -11,19 +11,21 @@ html{
 }
 body{
     align-items: center;
-    background: linear-gradient(320deg, #63c9b4, #ffef78, #63c9b4);
+    /**background: linear-gradient(320deg, #63c9b4, #ffef78, #63c9b4);**/
+    background-color: rgb(16, 29, 64);
     display: flex;
     font-family: 'dosis', sans-serif;
     font-display: swap;
     height: inherit;
     justify-content: center;
+    background: -webkit-linear-gradient(90deg, #145ac0,#0056a5,#004e88,#004469,#05394c);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(90deg, #145ac0,#0056a5,#004e88,#004469,#05394c);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
 }
 #resultado {
         backdrop-filter: blur(5.5px);
         -webkit-backdrop-filter: blur(5.5px);
         background: rgba(255, 255, 255, 0.75);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
+        border-radius: 6px;
         box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
         color:  #232323;
         font-size: 20px;
@@ -46,7 +48,7 @@ body{
     -webkit-backdrop-filter: blur(5.5px);
     background: rgba(255, 255, 255, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius:  14px;
+    border-radius:  5px;
     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
     color: #232323;
     
@@ -58,8 +60,9 @@ body{
     
 }
 #send:hover {
-    background-color: #8fcfc3;
+    background-color: #0acc14;
     border: 2px solid rgba(0, 0, 0, 0.1);
+    color: aliceblue;
 }
 #send:active {
     background-color: #63c9b4;
@@ -78,7 +81,7 @@ form {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
    
-    border-radius: 16px;
+    border-radius: 8px;
     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
     color: #232323;
     backdrop-filter: blur(4px);
@@ -97,9 +100,9 @@ p {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 14px;
-    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.34);
     color:  #232323;
     font-size: 20px;
     overflow: auto;
@@ -112,9 +115,9 @@ p {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 14px;
-    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.34);
     color:  #232323;
     font-size: 20px;
     overflow: auto;
@@ -125,4 +128,15 @@ p {
 }
 #historico1, #litros, #kmrodado {
     background-color: #8fcfc3;
+}
+.fundotipodecombustivel{
+    width: 86%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.281);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+}
+.saida{
+    margin-left: 20px;
 }

@@ -13,15 +13,18 @@
     <p>Calcular valor gasto Combustivel</p>
     <div class="entrada"><input type="number" id="kminicial" name="kminicial" placeholder="Km Inicial"></div><br>
     <div class="entrada"><input type="number" id="kmfinal" name="kmfinal" placeholder="km Final"></div><br>
-
+    
+    <div class="fundotipodecombustivel">
     <div class="entradaradios"><input type="radio" id="gasolina" name="combustivel" value="gasolina"/><label>Gasolina</label>
     <input type="radio" id="etanol" name="combustivel" value="etanol"/><label>Etanol</label><br>
     </div>
-
+    </div>
     
     <div class="botao"><input type="button" id="send" value="Calcular"></div><br>
     
+    <div class="boxresultado">
     <div class="saida"><label for="resultado">R$</label><input type="number" id="resultado" name="resultado" placeholder="Resultado"></div><br>
+    </div>
     <label class="info" id="info"></label>
     <label class="historico" id="historico1"></label>
     <label class="historico" id="litros"></label>
