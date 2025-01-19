@@ -122,7 +122,7 @@ p {
     width: 86%;
     margin: 10px;
 }
-#historico1, #litros, #kmrodado {
+#historico1, #litros, #kmrodado, #kmporlitro {
     background-color: #8fcfc3;
 }
 .fundotipodecombustivel{
