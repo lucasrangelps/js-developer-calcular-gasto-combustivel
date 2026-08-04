@@ -2,7 +2,7 @@
 let tipoCombustivel = "gasolina";
 let valorGasolina = 6.09;
 let valorEtanol = 4.29;
-let kmPorLitroGasolina = 12.5;
+let kmPorLitroGasolina = 12.3;
 let kmPorLitroEtanol = 7.67;
 
 
